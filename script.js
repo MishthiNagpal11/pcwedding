@@ -1,17 +1,22 @@
 /* ===== EDIT ME ===== */
 const CFG = {
-  groom: "Chirag",
-  bride: "Parnika",
+  groom: "Parnika",
+  bride: "Chirag",
   year: 2026, // confirm the wedding year
   tz: "+05:30", // timezone of the venue
   startTime: "00:00", // first event start (HH:MM) for the countdown
   familyLines: [
     "With the blessings of the Almighty ",
-    "Smt. Veera Devi & Late Sh. Brij Lal Takkar",
+    "Late Smt. Nirmal & Late Sh. Krishan Lal Harjai",
   ],
-  familyNames: ["Mrs. Shammi & Mr. Mahesh Takkar"],
-  brideFamily: "D/O Mrs. Ruchi & Mr. Dinesh Harjai",
-  familyHeading: "Takkar Family",
+  familyNames: ["Mrs. Ruchi & Mr. Dinesh Harjai"],
+  brideFamily: "S/O Mrs. Shammi & Mr. Mahesh Takkar",
+  familyHeading: [
+    "Harjai Family",
+    "Malhotra Family",
+    "Nijhawan Family",
+    "Sehgal Family",
+  ],
   events: [
     {
       cls: "s",
@@ -79,14 +84,25 @@ $("n2").textContent = CFG.bride;
 $("fam").innerHTML =
   CFG.familyLines.map((l) => `<div>${l}</div>`).join("") +
   '<div style="margin-top:8px"><b>' +
-  "Mrs. Shammi & Mr. Mahesh Takkar</b></div><div>request the honour of your presence at the wedding ceremony of their beloved son</div>";
+  "Mrs. Ruchi & Mr. Dinesh Harjai</b></div><div>request the honour of your presence at the wedding ceremony of their beloved daughter</div>";
 $("bf").textContent = CFG.brideFamily;
 $("dt").textContent = "2nd December " + Y;
 $("fn").textContent = CFG.groom + " & " + CFG.bride;
 $("fd").textContent = "1st & 2nd December " + Y;
 $("fh2").textContent = CFG.hashtag;
-$("fh").textContent = CFG.familyHeading;
+const heading = $("fh");
+heading.replaceChildren();
 
+const familyNames = Array.isArray(CFG.familyHeading)
+  ? CFG.familyHeading
+  : [CFG.familyHeading];
+
+familyNames.forEach((name) => {
+  const span = document.createElement("span");
+  span.className = "family-heading";
+  span.textContent = name;
+  heading.appendChild(span);
+});
 /* Render both venue sections in CFG.venues order */
 const venueSections = document.querySelectorAll(".venue-section");
 

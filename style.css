@@ -915,3 +915,7 @@ footer p {
   font-weight: 600;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
+.family-heading {
+  display: block;
+  margin-bottom: 8px;
+}
