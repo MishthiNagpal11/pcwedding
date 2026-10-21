@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Chirag &amp; Parnika – Wedding Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Playfair+Display:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body class="lock">
+    <button id="env" aria-label="Tap the envelope to open your invitation">
+      <div class="ebox">
+        <div class="env">
+          <div class="letter"></div>
+          <div class="pocket"></div>
+          <div class="flap"></div>
+          <span class="fl">❀</span>
+
+          <div class="logo-circle">
+            <img class="logo" src="images/logo.png" alt="C &amp; P monogram" />
+          </div>
+        </div>
+        <h1 class="script">You’re Invited</h1>
+        <p>Tap the envelope to open your invitation</p>
+      </div>
+    </button>
+
+    <section id="welcome">
+      <div class="bgl" id="sky"></div>
+      <div class="in2 rv">
+        <div id="fam"></div>
+        <span class="nm script" id="n1"></span><span class="wi">with</span
+        ><span class="nm script" id="n2"></span>
+        <div id="bf"></div>
+      </div>
+    </section>
+
+    <section id="save">
+      <div class="c rv">
+        <h2>SAVE THE DATE</h2>
+        <div class="card" id="card">
+          <div class="rev">
+            <small>THE WEDDING</small>
+            <div id="dt"></div>
+          </div>
+          <canvas
+            id="cv"
+            aria-label="Scratch to reveal the wedding date"
+          ></canvas
+          ><span class="pill">✦ SCRATCH TO REVEAL ✦</span>
+        </div>
+        <div class="cd" id="cd" aria-live="off"></div>
+      </div>
+    </section>
+
+    <section id="events">
+      <span class="orn">❀</span>
+      <h2 class="t rv">Events Schedule</h2>
+      <div class="ev" id="ev"></div>
+    </section>
+
+    <section id="garden">
+      <div class="rv" style="position: relative">
+        <span class="orn">❀</span>
+        <h2 class="t" style="margin-bottom: 14px">
+          Awaiting Your Heartly Presence
+        </h2>
+        <p>
+          Because celebrating two souls becoming one deserves all your love,
+          laughter and blessings.
+        </p>
+      </div>
+    </section>
+
+    <section id="family">
+      <div class="rv">
+        <div class="lbl">WITH LOVE</div>
+        <h2 id="fh"></h2>
+        <p id="fl"></p>
+      </div>
+    </section>
+
+    <section class="venues" id="venues">
+      <!-- FIRST VENUE -->
+      <article
+        class="venue-section venue-one"
+        style="--venue-image: url(&quot;images/thePage.jpg&quot;)"
+      >
+        <div class="venue-overlay"></div>
+
+        <div class="venue-content">
+          <p class="venue-eyebrow">OUR ENGAGEMENT VENUE</p>
+
+          <h2>Where We Celebrate</h2>
+
+          <h3>The Page</h3>
+
+          <p class="venue-location">Rohtak,Haryana</p>
+
+          <a
+            class="directions-btn"
+            href=""https://www.google.com/maps/dir/?api=1&destination=The+Page%2C+Rohtak%2C+Haryana"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get Directions
+          </a>
+        </div>
+
+        <span class="venue-number">01</span>
+      </article>
+
+      <!-- SECOND VENUE: ZORBAGH BANQUET -->
+      <article
+        class="venue-section venue-two"
+        style="--venue-image: url(&quot;images/zorbagh.jpg&quot;)"
+      >
+        <div class="venue-overlay"></div>
+
+        <div class="venue-content">
+          <p class="venue-eyebrow">OUR WEDDING VENUE</p>
+
+          <h2>Where We Celebrate</h2>
+
+          <h3>Zorbagh Banquet</h3>
+
+          <p class="venue-location">Rohtak,Haryana</p>
+
+          <a
+            class="directions-btn"
+            href="https://www.google.com/maps/dir/?api=1&destination=Zorbagh+Banquet%2C+Rohtak%2C+Haryana"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get Directions
+          </a>
+        </div>
+
+        <span class="venue-number">02</span>
+      </article>
+    </section>
+
+    <footer>
+      <p class="script" id="fn"></p>
+      <p id="fd"></p>
+      <p id="fh2"></p>
+    </footer>
+
+    <audio id="wedding-song" loop preload="auto">
+      <source src="audio/rhtdm_rain_theme.mp3" type="audio/mpeg" />
+    </audio>
+
+    <button id="mus" aria-label="Play music" aria-pressed="false">♪</button>
+  </body>
+</html>
